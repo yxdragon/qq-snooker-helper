@@ -143,7 +143,7 @@ class Table:
         for p in self.paths: self.plot_path(p)
         if len(self.hitpts)>0:
             plt.plot(self.hitpts[:,1], self.hitpts[:,0], 'r.')
-        #plt.show()
+        plt.show()
 
     def plot_path(self, path):
         x, y, arc, l = path.frm.x, path.frm.y, path.arc, path.l
@@ -174,7 +174,7 @@ class Table:
                 for b in self.balls:
                     if b != ball and i>5 and b != path.to.frm:
                         path.inpoint(b)
-                if path.arc.value()>0.001:
+                if path.arc.value()>0.0005:
                     self.paths.append(path)
         self.paths = self.paths[6:]
 
@@ -206,15 +206,3 @@ if __name__ == '__main__':
         #table.test()
         print(time()-start)
         table.show()
-
-    plt.figure()
-    table = extract_table(img, 'snooker')
-    if isinstance(table, tuple):
-        table = Table(* table, 'snooker')
-        table.solve(1, 2)
-        start = time()
-        #table.test()
-        print(time()-start)
-        table.show()
-
-    plt.show()
