@@ -28,9 +28,11 @@
 ### 球桌对象及控件分析：table
 table定义了点，线，面，球等基础几何对象，并在此基础上组装成Table对象，可以用于球的可视化与策略生成。
 ![s1](https://user-images.githubusercontent.com/24822467/93711457-1af77780-fb81-11ea-9531-287d7243c705.png)
+
 生成红球击打策略，禁止组合球
 
 ![s2](https://user-images.githubusercontent.com/24822467/93711460-1e8afe80-fb81-11ea-8b8d-28d3542d5757.png)
+
 生成红球击打策略，允许组合球
 
 ### 鼠标控制模块：robot
